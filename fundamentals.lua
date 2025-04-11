@@ -1,3 +1,6 @@
+-- if you use terminal to run these scripts, you'll need a lua compiler
+-- if you use neovim, just run the current lua file using ":luafile % <Enter>"
+--
 -- define tables : {[key(optional] = value, [key2(optional] = value}
 -- for key, val in pairs(tableName) to iterate
 
@@ -44,3 +47,12 @@ print({ x = "abc", y = "def" })
 local testTable3 = { x = "abc", y = "def" }
 setmetatable(testTable3, tostring)
 print(testTable3)
+
+local Vector = {}
+function Vector:__tostring()
+	return "(" .. self.x .. "," .. self.y .. ")"
+end
+
+local testVector = { x = 2, y = 3 }
+setmetatable(testVector, Vector)
+print(testVector)
