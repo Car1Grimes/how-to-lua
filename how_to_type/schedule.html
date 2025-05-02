@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>21‑Day TypeScript + React Study Plan</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 2rem;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        text-align: left;
+      }
+      th {
+        background: #f4f4f4;
+      }
+      .week {
+        background: #eef;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>21‑Day TypeScript + React Study &amp; Build Plan</h1>
+    <p>
+      <strong>Daily commitment:</strong> 6–8 hours (split into two 3–4 h
+      blocks).<br />
+      Built‑in 3‑day buffer for unexpected delays (total span: 24 calendar
+      days).
+    </p>
+
+    <h2 class="week">
+      Week 1: TypeScript Fundamentals &amp; React Integration
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Focus / Deliverable</th>
+          <th>Morning (3–4 h)</th>
+          <th>Afternoon (3–4 h)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>
+            <strong>TS basics: types, interfaces</strong><br />Deliverable:
+            <code>.ts</code> file with examples
+          </td>
+          <td>
+            Read TS Handbook: Basic Types &amp; Variables<br />Code exercises:
+            <code>number</code>, <code>string</code>, <code>boolean</code>,
+            <code>array</code>, <code>tuple</code>
+          </td>
+          <td>
+            Define custom <code>interface</code> &amp;
+            <code>type</code> aliases<br />Model “User” and “Post” types, write
+            functions consuming them
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>
+            <strong>TS functions &amp; generics</strong><br />Deliverable:
+            generic utility functions
+          </td>
+          <td>
+            Study function types, optional/rest parameters, overloads<br />Exercise:
+            type-safe math &amp; string utilities
+          </td>
+          <td>
+            Learn generics: generic functions &amp; interfaces<br />Build:
+            <code>mapItems&lt;T&gt;</code>,
+            <code>filterItems&lt;T&gt;</code> with strict typing
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>
+            <strong>TS advanced types</strong><br />Deliverable: examples of
+            union, intersection, mapped types
+          </td>
+          <td>
+            Read about union &amp; intersection types, <code>readonly</code>,
+            literal types<br />Code: discriminated unions (e.g.
+            <code>type Shape = Circle | Square</code>)
+          </td>
+          <td>
+            Explore mapped &amp; conditional types<br />Exercise: build
+            <code>Partial&lt;T&gt;</code>, <code>Pick&lt;T, K&gt;</code> from
+            scratch
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>
+            <strong>Setup React+TS starter</strong><br />Deliverable: working
+            Vite/CRA TS React repo
+          </td>
+          <td>
+            Scaffold project with Vite+TS+React or CRA TS template<br />Verify
+            <code>tsconfig.json</code> settings
+          </td>
+          <td>
+            Build first TSX components: typed props &amp; state<br />Lint and
+            Prettier config for TS
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>
+            <strong>Component patterns in TSX</strong><br />Deliverable: Button,
+            FormInput, ListItem components
+          </td>
+          <td>
+            Study <code>FC</code> vs typed function components<br />Build a
+            reusable <code>Button</code> component with typed props
+          </td>
+          <td>
+            Create a typed <code>FormInput</code> (controlled component)<br />Create
+            a typed <code>ListItem</code> rendering generic data
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>
+            <strong>React state + TS</strong><br />Deliverable: small counter
+            &amp; todo list
+          </td>
+          <td>
+            Deep dive <code>useState</code> with TS (state unions, lazy init)<br />Build
+            counter with increment/decrement
+          </td>
+          <td>
+            Build a small todo list: add/remove typed todo items<br />Ensure all
+            handlers typed, no <code>any</code>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>
+            <strong>Review &amp; mini‑quiz</strong><br />Deliverable: repo
+            README summary
+          </td>
+          <td>
+            Review Days 1–6: refine code, fix TS errors<br />Write README
+            summarizing TS patterns learned
+          </td>
+          <td>
+            Self‑quiz: 10 TS+React questions (write &amp; answer)<br />Buffer
+            for spill‑over or rest
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="week">Week 2: React Architecture &amp; State Management</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Focus / Deliverable</th>
+          <th>Morning (3–4 h)</th>
+          <th>Afternoon (3–4 h)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8</td>
+          <td>
+            <strong>Props drilling &amp; context</strong><br />Deliverable:
+            Context demo
+          </td>
+          <td>
+            Build 3‑level component tree passing props<br />Refactor with React
+            Context + TS
+          </td>
+          <td>
+            Create a ThemeContext (light/dark) with typed context value<br />Toggle
+            theme in nested component
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>
+            <strong>useReducer &amp; global state</strong><br />Deliverable:
+            counter with useReducer
+          </td>
+          <td>
+            Learn <code>useReducer</code> pattern with TS action types<br />Build
+            a counter with <code>useReducer</code>
+          </td>
+          <td>
+            Expand to a todo app using <code>useReducer</code> for
+            add/delete/toggle<br />Type actions &amp; state strictly
+          </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>
+            <strong>Introduction to a state library (Zustand)</strong
+            ><br />Deliverable: simple store
+          </td>
+          <td>
+            Install Zustand + TS setup<br />Create a store for counter state
+          </td>
+          <td>
+            Use store in two separate components<br />Persist store to
+            localStorage (with TS)
+          </td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>
+            <strong>Async state: React Query</strong><br />Deliverable: data
+            fetch demo
+          </td>
+          <td>
+            Install React Query + TS<br />Fetch from public API (e.g.
+            JSONPlaceholder)
+          </td>
+          <td>
+            Display loading/error states typed<br />Invalidate &amp; refetch on
+            button click
+          </td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>
+            <strong>Forms &amp; validation</strong><br />Deliverable: login form
+            with validation
+          </td>
+          <td>
+            Use React Hook Form + TS<br />Build login form with typed fields
+          </td>
+          <td>
+            Integrate Yup for schema validation<br />Show typed error messages
+          </td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>
+            <strong>Project kickoff: Task‑Manager App</strong><br />Deliverable:
+            repo scaffold + basic UI
+          </td>
+          <td>
+            Create new Vite/CRA TS React repo “task‑manager”<br />Sketch UI
+            wireframes (list, add, edit tasks)
+          </td>
+          <td>
+            Scaffold components: Header, TaskList, TaskItem, AddTaskForm (empty)
+          </td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>
+            <strong>Review &amp; buffer</strong><br />Deliverable: polished
+            Week 2 code
+          </td>
+          <td>
+            Refine context/store patterns in Week 2 code<br />Update README with
+            state‑library notes
+          </td>
+          <td>Buffer day: catch up or rest</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="week">Week 3: Project Build &amp; Advanced Patterns</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Focus / Deliverable</th>
+          <th>Morning (3–4 h)</th>
+          <th>Afternoon (3–4 h)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>15</td>
+          <td>
+            <strong>Implement Add/Edit Task</strong><br />Deliverable: working
+            add/edit form
+          </td>
+          <td>
+            Build AddTaskForm: controlled or RHF with TS<br />Implement
+            edit-in-place in TaskItem
+          </td>
+          <td>
+            Type all handlers &amp; form data<br />Unit test add/edit logic
+            (Jest + React Testing Library)
+          </td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>
+            <strong>Task persistence</strong><br />Deliverable: localStorage or
+            mock‑API
+          </td>
+          <td>
+            Hook state to localStorage or MirageJS mock API<br />Ensure TS types
+            for storage layer
+          </td>
+          <td>
+            Load tasks on init, save on change<br />Handle JSON parse errors
+            with safe types
+          </td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>
+            <strong>Filtering &amp; sorting</strong><br />Deliverable:
+            filter/sort UI
+          </td>
+          <td>
+            Add filter (by status) &amp; sort (by date) controls<br />Type
+            filter functions
+          </td>
+          <td>
+            Memoize lists with <code>useMemo</code>+TS<br />Add unit tests for
+            filter/sort
+          </td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>
+            <strong>Authentication flow (optional)</strong><br />Deliverable:
+            mock login/logout
+          </td>
+          <td>
+            Create AuthContext + TS types<br />Build LoginForm with fake auth
+            API
+          </td>
+          <td>
+            Protect Task routes, redirect if not logged in<br />Persist auth
+            token (mock)
+          </td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>
+            <strong>Polish UI &amp; accessibility</strong><br />Deliverable:
+            styled, a11y‑checked app
+          </td>
+          <td>
+            Add basic CSS or Tailwind<br />Ensure keyboard nav, ARIA labels
+            typed
+          </td>
+          <td>Run Lighthouse audit, fix issues<br />Add responsive layout</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>
+            <strong>Final testing &amp; docs</strong><br />Deliverable: tests +
+            README
+          </td>
+          <td>
+            Write integration tests for core flows<br />Ensure 80%+ coverage
+          </td>
+          <td>
+            Complete README: setup, features, technologies<br />Deploy to
+            Netlify/Vercel
+          </td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>
+            <strong>Demo &amp; retrospective</strong><br />Deliverable: demo
+            video + plan next steps
+          </td>
+          <td>Record a 3‑min screen walkthrough of your app</td>
+          <td>
+            List 3 improvements &amp; 3 new features to add next<br />Plan
+            follow‑up learning (e.g. Next.js)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Tips for Success</h3>
+    <ul>
+      <li>
+        <strong>Time‑block</strong>: Stick to two focused sessions with breaks.
+      </li>
+      <li>
+        <strong>Commit daily</strong>: Push to GitHub each evening with clear
+        messages.
+      </li>
+      <li>
+        <strong>Ask for help</strong>: Try 30 min on your own, then seek help on
+        StackOverflow/Discord.
+      </li>
+      <li>
+        <strong>Reflect</strong>: End each day writing 3 things you learned and
+        1 question.
+      </li>
+    </ul>
+  </body>
+</html>
